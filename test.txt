@@ -1,0 +1,21 @@
+NETWORK
+  Papillon
+HOSTS
+  hostL1
+  hostL2
+  hostMed
+  hostR1
+  hostR2
+LINKS
+  hostL1 TO hostMed
+  hostL2 TO    hostMed
+  hostMed TO hostR1
+  hostMed TO    hostR2
+  hostR1 TO hostMed
+  hostR2 TO hostMed
+  hostMed TO    hostL1
+  hostMed TO hostL2
+MESSAGES
+  hostL1 TO hostR1
+  hostL2 TO hostR2
+END
