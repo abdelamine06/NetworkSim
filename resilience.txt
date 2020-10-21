@@ -7,6 +7,7 @@ HOSTS
   hostR1
   hostR2
 LINKS
+  hostR1 TO hostR2
   hostL1 TO hostMed
   hostL2 TO    hostMed
   hostMed TO hostR1

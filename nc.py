@@ -84,12 +84,7 @@ def create_msg_objects(messages, host_objs):
 
 def read_from_file(filename):
 	random.seed()
-	try:
-		file_stream = open(filename, 'r')
-	except IOError:
-		print ("File name does not exist. Exiting program...")
-		sys.exit()
-	 
+	file_stream = open(filename, 'r')
 	lines = []	
 	for line in file_stream:
 		clean_line = line.strip()
@@ -141,7 +136,7 @@ def simulate(msg_objs, network_name):
 # If this is not an imported module, run the simulation on some file
 if __name__ == '__main__':
 	print("\n***********Simulation Network coding **************:\n")
-	_file = input("Entrez le nom de votre configuration Papillon:")
+	_file = input("Entrez le nom de votre configuration Papillon/Resilience:")
 	
 	read_data = read_from_file(_file)
 	hosts = read_data[0]
